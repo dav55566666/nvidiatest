@@ -1,0 +1,123 @@
+// глобальные стили кроме normalize
+
+.container {
+	@include make-container();
+	@include make-container-max-widths();
+}
+
+img {
+	@include img-fluid();
+}
+.main{
+	padding: 60px 15px 125px;
+	width: 100%;
+	background-image: url("../img/bg.png");
+	background-size: cover;
+	background-position: center;
+	.main__container {
+		max-width: 1110px;
+		width: 100%;
+		margin: 0 auto;
+		.main__title {
+			max-width: 730px;
+			width: 100%;
+			margin: 0 auto 50px;
+			h1 {
+				width: 100%;
+				text-align: center;
+				margin: 0 0 20px;
+				font-family: Play;
+				font-style: normal;
+				font-weight: bold;
+				font-size: 26px;
+				line-height: 36px;
+				letter-spacing: 0.25px;
+				color: $white;
+			}
+			p {
+				margin: 0;
+				text-align: center;
+				font-family: Roboto;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 16px;
+				line-height: 28px;
+				color: $white;
+				letter-spacing: 0.3px;
+			}
+		}
+		.main__grid {
+			width: 100%;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 30px;
+			.main__item { 
+				svg{
+					margin: 0 auto 28px;
+					display: block;
+					path{
+						transition: all 0.5s;
+					}
+				}
+				&:hover{
+					svg path{
+						&:first-child{
+							stroke: #77B900!important;
+							fill: rgba(119, 185, 0, 0.25);
+						}
+					}
+				}
+				h4 {
+					font-family: Play;
+					font-style: normal;
+					font-weight: bold;
+					font-size: 26px;
+					line-height: 36px;
+					letter-spacing: 0.25px;
+					color: #77B900;
+					margin-bottom: 12px;
+					span{
+						font-family: Play;
+						font-style: normal;
+						font-weight: normal;
+						font-size: 26px;
+						line-height: 36px;
+						letter-spacing: 0.25px;
+						color: $white;
+					}
+				}
+				p {
+					font-family: Roboto;
+					font-style: normal;
+					font-weight: normal;
+					font-size: 16px;
+					line-height: 28px;
+					letter-spacing: 0.3px;
+					color: #E1E1E1;
+				}
+			}
+		}
+		.pay{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 30px auto 0;
+			width: 192px;
+			height: 56px;
+			background: #77B900;
+			border: 2px solid #77B900;
+			font-family: Play;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 21px;
+			transition: all 0.5s;
+			letter-spacing: 0.25px;
+			color: $white;
+			&:hover{
+				background: $black;
+				color: $white;
+			}
+		}
+	}
+}
